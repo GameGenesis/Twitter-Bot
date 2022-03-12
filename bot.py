@@ -1,28 +1,28 @@
-import tweepy #Twitter's API (Install tweepy into your project folder)
+import tweepy
 import time
 
-#Your API keys (Sign up for a twitter developer account)
-consumer_key = 'XXX'
-consumer_secret = 'XXX'
+#Your API key and secret (Sign up for a twitter developer account)
+CONSUMER_KEY = 'XXX'
+CONSUMER_SECRET = 'XXX'
 
 #Your access tokens (Sign up for a twitter developer account)
-key = 'XXX'
-secret = 'XXX'
+ACCESS_TOKEN_KEY = 'XXX'
+ACCESS_TOKEN_SECRET = 'XXX'
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(key, secret)
+auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+auth.set_access_token(ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET)
 
 api = tweepy.API(auth)
 #Write out a test tweet
 api.update_status('Twitter Bot Test Tweet!')
 
 #The hashtag you want to filter by
-hashtag = "#indiedev"
+HASHTAG = "#indiedev"
 #The number of tweets with the hashtag you want to grab
-tweetnumber = 10
+NUMBER_OF_TWEETS = 10
 
 def searchBot():
-    tweets = tweepy.Cursor(api.search, hashtag).items(tweetnumber) #Grab the first [tweetnumber] of tweets containing the hashtag
+    tweets = tweepy.Cursor(api.search, HASHTAG).items(NUMBER_OF_TWEETS) #Grab the first [tweetnumber] of tweets containing the hashtag
     for tweet in tweets:
         try:
             tweet.favorite() #Like the tweet

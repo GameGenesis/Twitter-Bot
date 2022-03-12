@@ -18,7 +18,7 @@ A Twitter Bot that can tweet, like, retweet, and follow. It searches up the top 
 * Because you have changed app permissions, you might have to regenerate all the keys
 * Go back to the project folder
 * Make sure to have Python3 installed
-* Open a command line interface and download twitter's API "tweepy" by typing in the command line within the project folder `pip install tweepy` or `pip3 install tweepy`
+* Open a command line interface and download the tweepy library by typing in the command line within the project folder `pip install tweepy` or `pip3 install tweepy`
 * Once installed, open the project folder in an IDE of your choice or VS Code
 * Finally, go to the keys and tokens tab, view the keys, and copy them into the string variables (replacing each "XXX") respectively
 * Run the code, or host it somewhere to run automatically
